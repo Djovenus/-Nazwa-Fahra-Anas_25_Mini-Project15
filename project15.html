@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Project 15</title>
+<style>
+  .body{
+    font-size: 50px;
+    margin-left: 35%; 
+    margin-top: 10%;
+    font-family: Times New Roman;
+  }
+  .h1{
+  
+  }
+  #btn{
+    font-size: 50px;
+    margin-top: 20px;
+    padding: 30px;
+    border-radius: 50px;
+    background-color: lavender;
+  }
+  #list li{
+    margin-top: 70px;
+  }
+  .biru{
+    color: #3456b3 !important;
+    font-weight: bold;
+  }
+</style>
+<script>
+ function button() {
+      let items = document.querySelectorAll('#list li');
+    
+    for(let i = 0; i < items.length; i++) {
+        if((i + 1) % 2 === 0) {
+            items[i].classList.add('biru');
+        } else {
+            items[i].classList.remove('biru');
+        }
+    }
+ }
+</script>
+</head>
+<body class="body">
+  <h1 class="h1">To Do List</h1>
+  <ul id="list">
+    <li>Item Ganjil</li>
+    <li>Item Genap</li>
+    <li>Item Ganjil</li>
+    <li>Item Genap</li>
+    <li>Item Ganjil</li>
+    <li>Item Genap</li>    
+  </ul>
+  <button id="btn" onclick="button()">Ubah Warna</button>
+</body>
